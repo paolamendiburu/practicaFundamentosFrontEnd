@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+    <meta charset="UTF-8">
     <title>Portfolio Paola Mendiburu</title>
     <link rel="stylesheet" href="./css/style.css">
 
@@ -163,6 +164,50 @@
                         </a>
                     </div>
                 </div>
+                <div class="formulario-contacto">
+                    <form name="contacto" method="get" novalidate>
+                        <div class="row">
+                            <div class="col-6">
+                                <p>
+
+                                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                                </p>
+
+
+                                <p>
+                                    <input type="email" id="email" name="email" placeholder="Email" pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" required>
+                                </p>
+                                <p>
+                                    <input type="text" id="telefono" name="telefono" placeholder="Número de teléfono" maxlength="9">
+                                </p>
+
+
+                                <p>Selecciona cómo me has conocido
+                                    <select size=4 name="conocido" class="seleccion-conocido" onchange="otroCheck(this);">
+                                        <option value="google" id="option1">Google</option>
+                                        <option value="redesSociales" id="option2">Redes sociales</option>
+                                        <option value="amigos" id="option3">Amigos</option>
+                                        <option value="otros">Otros</option>
+                                    </select>
+                                </p>
+
+                                <p id="otroField" style="display: none;">
+                                    <input type="text" name="otro" id="otro" placeholder="Escribe otros">
+                                </p>
+
+                            </div>
+                            <div class="col-6">
+                                <p>
+                                    <textarea name="mensaje" id="mensaje" cols="45" rows="10" placeholder="Escribe tu mensaje"></textarea>
+                                </p>
+
+                                <p class="submitBtn">
+                                    <button type="submit" id="enviar">Enviar</button>
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
 
             </div>
 
@@ -172,9 +217,20 @@
     <footer class="footer row-flex">
         <p class="align-center">Paola Mendiburu &copy; 2018</p>
     </footer>
+    <script>
+        function otroCheck(option) {
+            if (option.value == "otros") {
+                document.getElementById("otroField").style.display = "block";
+            } else {
+                document.getElementById("otroField").style.display = "none";
+            }
+        }</script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 
     <script src="./scripts/menu.js"></script>
+    <script src="./scripts/notifications.js"></script>
+    <script src="./scripts/contact.js"></script>
+    <script src="./scripts/ajax.js"></script>
 
 </body>
 

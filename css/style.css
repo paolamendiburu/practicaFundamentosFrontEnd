@@ -320,7 +320,31 @@ a{
   max-width: 100%;
   resize: none;
 }
+/*Empieza contact form*/
+.formulario-contacto input,.formulario-contacto textarea,.formulario-contacto select {
+  background-color: #eee;
+  border: solid 2px white;
+  border-radius: 4px;
+  color: #333;
+  padding: 16px;
+  font-size: 15px;
+  width: 100%;
+  margin-right: 10px;
+}
+.submitBtn{
+  text-align: center;
 
+}
+.submitBtn button{
+    width: 200px;
+    background-color: rgb(25, 82, 167);;
+    border-radius: 4px;
+    color: white;
+    font-size: 18px;
+    padding: 12px 25px;
+    line-height: 1.4;
+    cursor: pointer;
+}
 .footer {
   background: rgb(25, 82, 167);
   padding: 15px 0px;
