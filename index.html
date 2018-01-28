@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Portfolio Paola Mendiburu</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="navbar__list">
+            <li class="navbar__item navbar__item--active">
+                <a href="#header">Inicio</a>
+            </li>
+            <li class="navbar__item ">
+                <a href="#quien-soy">Quien soy</a>
+            </li>
+            <li class="navbar__item ">
+                <a href="#skills">Skills</a>
+            </li>
+            <li class="navbar__item ">
+                <a href="#estudios">Estudios</a>
+            </li>
+
+
+            <li class="navbar__item ">
+                <a href="#contacto">Contacto</a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <header id="header" class="header">
+
+
+        <!-- <div class="header__image"></div> -->
+        <img class="header__image" src="./imgs/portada.jpeg">
+        <h1 class="header__title">Paola Mendiburu</h1>
+        <h2 class="header__subtitle">Desarrolladora de aplicaciones web</h2>
+    </header>
+
+    <main>
+        <section id="quien-soy" class="section">
+            <div class="section-container container">
+                <h2 class="align-center">Quien soy</h2>
+                <div>
+
+                    <p class="align-center">
+                        Me encanta la programación
+                    </p>
+                    <p>Me llamo Paola Mendiburu, soy de Pamplona y tengo 26 años. Me considero una apasionada de la tecnologia
+                        y el deporte. Desde muy pequeña he tenido esta afición, siempre me ha interesado conocer que hay
+                        detrás de una aplicación, web... hasta que un día me decidí a empezar en el fascinante mundo de la
+                        programación
+                    </p>
+
+                    <div class="row">
+                        <div class="col-6  align-right">
+                            <img src="./imgs/perfil.jpg" class="imagen-perfil" alt="Imagen de perfil">
+                        </div>
+
+                        <div class="col-6">
+                            <p class="quien-soy__quote">Con la ayuda de Keepcoding me voy a convertir en una Full Stack Web Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skills" class="section">
+            <div class="section-container container">
+                <h2 class="align-center">Skills</h2>
+                <div class="skills__progress">
+                    <progress value="90" max="100"></progress>
+                    <span>HTML5/CSS3</span>
+                    <progress value="80" max="100"></progress>
+                    <span>Javascript/jQuery</span>
+                    <progress value="60" max="100"></progress>
+                    <span>NodeJS</span>
+                    <progress value="50" max="100"></progress>
+                    <span>Angular</span>
+                    <progress value="60" max="100"></progress>
+                    <span>Python</span>
+                    <progress value="50" max="100"></progress>
+                    <span>Django</span>
+                </div>
+            </div>
+        </section>
+        <section id="estudios" class="section">
+            <div class="section-container container">
+                <h2 class="align-center">Estudios</h2>
+                <div class="row">
+                    <div class="estudios__list">
+
+                        <ul>
+                            <li>
+                                <div>
+                                    <time>2017-2018</time>
+                                    <p>Web development Bootcamp</p>
+                                    <p>Keepcoding</p>
+                                    <p>Madrid</p>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <time>2015-2016</time>
+                                    <p>App developer Career Programme</p>
+                                    <p>Training Dragon</p>
+                                    <p>Londres</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <time>2009-2013</time>
+                                    <p>Grado en Bioquímica</p>
+                                    <p>Universidad de Navarra</p>
+                                    <p>Navarra</p>
+
+                                </div>
+                            </li>
+
+
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="section">
+            <div class="section-container container">
+                <h2 class="align-center">Contacto</h2>
+                <p class="align-center">Contáctame o sígueme</p>
+                <div class="row">
+                    <div class="col-4  align-center">
+                        <a href="https://github.com/paolamendiburu" target="_blank">
+                            <p>
+                                <img src="./imgs/github-logo.png" alt="Icono de github">
+                            </p>
+                            <p>
+                                Github
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="col-4 align-center">
+                        <a href="https://www.linkedin.com/in/paolamendiburu/" target="_blank">
+                            <p>
+                                <img src="./imgs/linkedin-logo.png" alt="Icono de Linedin">
+                            </p>
+                            <p>Linkedin</p>
+                        </a>
+                    </div>
+                    <div class="col-4 align-center">
+                        <a href="https://twitter.com/paolamendiburu" target="_blank">
+                            <p>
+                                <img src="./imgs/twitter-logo-silhouette.png" alt="Icono de twitter">
+                            </p>
+                            <p>Twitter</p>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer row-flex">
+        <p class="align-center">Paola Mendiburu &copy; 2018</p>
+    </footer>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script src="./scripts/menu.js"></script>
+
+</body>
+
+</html>

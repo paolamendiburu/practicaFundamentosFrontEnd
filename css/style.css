@@ -1,0 +1,328 @@
+/*General*/
+@font-face {
+  src: url("../fonts/lato-regular.ttf");
+  font-family: lato;
+}
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+body {
+  --grid-size: 12;
+  padding: 0;
+  margin: 0;
+  font-family: lato, sans-serif;
+
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.align-center{
+  text-align: center;
+}
+.align-right{
+  text-align: right;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+.section-container {
+  padding: 50px 0;
+}
+.section:nth-child(odd){
+  background: #eee;
+}
+
+.section-container h2{
+  color: rgb(25, 82, 167);
+}
+.clearfix:after {
+  content: " "; /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-1 {
+  float: left;
+  width: calc(100% / var(--grid-size));
+}
+.col-2 {
+  float: left;
+  width: calc(calc(100% / var(--grid-size)) * 2);
+}
+.col-3 {
+  float: left;
+  width: calc(calc(100% / var(--grid-size)) * 3);
+}
+.col-4 {
+  float: left;
+  width: calc(calc(100% / var(--grid-size)) * 4);
+}
+.col-5 {
+  float: left;
+  width: calc(calc(100% / var(--grid-size)) * 5);
+}
+.col-6 {
+  float: left;
+  width: calc(calc(100% / var(--grid-size)) * 6);
+}
+.col-7 {
+  float: left;
+  width: calc(calc(100% / var(--grid-size)) * 7);
+}
+.col-8 {
+  float: left;
+  width: calc(calc(100% / var(--grid-size)) * 8);
+}
+.col-9 {
+  float: left;
+  width: calc(calc(100% / var(--grid-size)) * 9);
+}
+.col-10 {
+  float: left;
+  width: calc(calc(100% / var(--grid-size)) * 10);
+}
+.col-11 {
+  float: left;
+  width: calc(calc(100% / var(--grid-size)) * 11);
+}
+.col-12 {
+  float: left;
+  width: calc(calc(100% / var(--grid-size)) * 12);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--main-text-color);
+  z-index: 1;
+  height: 50px;
+}
+
+.navbar > .navbar__list {
+  float: right;
+  list-style-type: none;
+  margin: 0;
+  font-size: 0;
+}
+
+.navbar > .navbar__list > .navbar__item {
+  display: inline-block;
+  font-size: 1rem;
+  height: 50px;
+}
+
+.navbar > .navbar__list > .navbar__item a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 20px;
+  color: rgba(0, 0, 0, 0.9);
+  height: 50px;
+  transition: all 0.5s linear;
+}
+
+.navbar > .navbar__list > .navbar__item--active a {
+  color: #fff;
+  background-color: #1952a7;
+  height: 50px;
+}
+
+.navbar > .navbar__list > .navbar__item a:hover {
+  color: #fff;
+  background-color: #1952a7;
+  height: 50px;
+}
+
+.header > .header__title {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  width: 100%;
+  color: #fff;
+  font-family: lato;
+  text-align: center;
+  font-size: 4rem;
+  animation: tituloAnimacion;
+  animation-duration: 2s;
+}
+@keyframes tituloAnimacion {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.header > .header__subtitle {
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  color: #fff;
+  font-size: 1.6rem;
+  font-family: lato;
+  text-align: center;
+  animation: subtituloAnimacion;
+  animation-duration: 2s;
+}
+@keyframes subtituloAnimacion {
+  from {
+    margin-left: -100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+
+}
+.header > .header__image {
+
+  height: 100vh;
+  width: 100%;
+  opacity: 0.7;
+
+
+}
+/*Empieza quien soy*/
+.quien-soy__quote{
+  padding-right: 50px;
+  padding-top: 20px;
+
+}
+.imagen-perfil{
+  margin-right: 50px;
+  width: 200px;
+  border: 5px solid #d2d2d2;
+
+
+}
+/*Empieza la seccion de estudios */
+.estudios__list ul{
+  padding: 0;
+}
+.estudios__list ul li {
+    list-style-type: none;
+    position: relative;
+    width: 4px;
+    margin: 0 auto;
+    padding-top: 20px;
+    background: #1952a7;
+    color: #333;
+  }
+  .estudios__list ul li p{
+      margin: 0;
+      padding-top: 5px;
+  }
+  .estudios__list ul li div {
+    position: relative;
+    bottom: 0;
+    width: 215px;
+    padding: 15px;
+    border: .5px solid #1952a7;
+    border-radius: 5px;
+    background:transparent;
+  }
+
+  .estudios__list ul li div:hover {
+    background-color: #1952a7;
+    color: #fff;
+  }
+
+  .estudios__list ul li div::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    width:9px;
+    height: 0;
+    border-style: solid;
+  }
+
+  .estudios__list ul li:nth-child(odd) div {
+    left: 15px;
+  }
+
+  .estudios__list ul li:nth-child(odd) div::before {
+    left: -15px;
+    border-width: 3px;
+    border-color: #1952a7;
+  }
+
+  .estudios__list ul li:nth-child(even) div {
+    left: -229px;
+  }
+
+  .estudios__list ul li:nth-child(even) div::before {
+    right: -15px;
+    border-width: 3px;
+    border-color: #1952a7;
+  }
+  .estudios__list ul li:last-child{
+      padding-bottom: 20px;
+  }
+  /*Termina la seccion de estudios */
+  .skills__progress span {
+    top: -30px;
+    left: 15px;
+    position: relative;
+
+    color: #fff;
+}
+
+.skills__progress progress {
+    background-color: #f3f3f3;
+    border: 0;
+    height: 2.5em;
+    width: 100%;
+}
+.skills__progress progress::-webkit-progress-bar {
+  background-color: #eee;
+}
+
+.skills__progress progress::-webkit-progress-value {
+  background-color: rgb(25, 82, 167);
+}
+
+.skills__progress progress::-moz-progress-bar {
+  background-color: rgb(25, 82, 167);
+}
+
+
+/*Empieza contact*/
+
+.contact-form input, .contact-form textarea{
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+.contact-form textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+.footer {
+  background: rgb(25, 82, 167);
+  padding: 15px 0px;
+  color: #fff;
+}
