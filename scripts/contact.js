@@ -37,13 +37,14 @@ form.addEventListener("submit", function (event) {
   }
 
 
-
-  if (mensajeInput.value.length === 0) {
+  if (mensajeInput.value.match(/\S+/g).length == null) {
     alert("Por favor rellena el mensaje que se va a escribir");
+
     mensajeInput.focus();
     event.preventDefault();
     return false;
   }
+
 
   if (mensajeInput.value.match(/\S+/g).length > 150) {
 
@@ -62,4 +63,5 @@ form.addEventListener("submit", function (event) {
     submitButton.removeAttribute("disabled");
   }, 1000);
 });
+
 
