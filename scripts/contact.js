@@ -37,7 +37,7 @@ form.addEventListener("submit", function (event) {
   }
 
 
-  if (mensajeInput.value.match(/\S+/g).length == null) {
+  if (mensajeInput.value.match(/\S+/g).length == 0) {
     alert("Por favor rellena el mensaje que se va a escribir");
 
     mensajeInput.focus();
