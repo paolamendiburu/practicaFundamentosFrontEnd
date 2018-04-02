@@ -45,7 +45,8 @@ form.addEventListener("submit", function (event) {
     return false;
   }
 
-  if (mensajeInput.value.split(" ").length > 150) {
+  if (mensajeInput.value.match(/\S+/g).length > 150) {
+
     alert("El limite son 150 palabras");
     mensajeInput.focus();
     event.preventDefault();
@@ -61,3 +62,4 @@ form.addEventListener("submit", function (event) {
     submitButton.removeAttribute("disabled");
   }, 1000);
 });
+
