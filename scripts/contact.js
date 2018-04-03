@@ -37,7 +37,7 @@ form.addEventListener("submit", function (event) {
   }
 
 
-  if (mensajeInput.value.match(/\S+/g).length == 0) {
+  if (contadorPalabras(mensajeInput.value) === null) {
     alert("Por favor rellena el mensaje que se va a escribir");
 
     mensajeInput.focus();
@@ -46,7 +46,7 @@ form.addEventListener("submit", function (event) {
   }
 
 
-  if (mensajeInput.value.match(/\S+/g).length > 150) {
+  if (contadorPalabras(mensajeInput.value) > 150) {
 
     alert("El limite son 150 palabras");
     mensajeInput.focus();
@@ -63,5 +63,16 @@ form.addEventListener("submit", function (event) {
     submitButton.removeAttribute("disabled");
   }, 1000);
 });
+
+function contadorPalabras(value) {
+  var palabras = value.replace(/\s\s+/g, ' ');
+  var res = palabras.split(' ');
+
+  if (res[0] === '') {
+    return null;
+  } else {
+    return res.length;
+  }
+}
 
 
